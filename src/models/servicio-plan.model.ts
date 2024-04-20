@@ -22,6 +22,12 @@ export class ServicioPlan extends Entity {
   })
   detalles?: string;
 
+  @property({
+    type: 'string',
+    required: false,
+  })
+  foto: string;
+
   @hasMany(() => Plan, {through: {model: () => PlanServicioPlan}})
   planes: Plan[];
 

@@ -53,6 +53,12 @@ export class Cliente extends Entity {
   })
   fechaRegistro: string;
 
+  @property({
+    type: 'string',
+    required: false,
+  })
+  foto: string;
+
   @hasMany(() => Beneficiario)
   beneficiarios: Beneficiario[];
 

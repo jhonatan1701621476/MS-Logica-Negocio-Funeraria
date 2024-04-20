@@ -72,6 +72,12 @@ export class Beneficiario extends Entity {
   })
   fechaRegistro: string;
 
+  @property({
+    type: 'string',
+    required: false,
+  })
+  foto: string;
+
   @belongsTo(() => Cliente)
   clienteId: number;
 
