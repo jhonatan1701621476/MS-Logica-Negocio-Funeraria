@@ -3,7 +3,20 @@ import {Cliente} from './cliente.model';
 import {EstadoBeneficiario} from './estado-beneficiario.model';
 import {Solicitudes} from './solicitudes.model';
 
-@model()
+@model({
+  settings: {
+    foreignKeys:
+    {
+      fkBeneficiarioClienteID: {
+        name: 'fkBeneficiarioClienteID',
+        entity: 'Cliente',
+        entityKey: 'id',
+        foreignKey: 'clienteId'
+      }
+    }
+  }
+})
+
 export class Beneficiario extends Entity {
   @property({
     type: 'number',

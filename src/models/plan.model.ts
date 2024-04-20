@@ -4,7 +4,9 @@ import {ClientePlan} from './cliente-plan.model';
 import {ServicioPlan} from './servicio-plan.model';
 import {PlanServicioPlan} from './plan-servicio-plan.model';
 
-@model()
+@model({
+})
+
 export class Plan extends Entity {
   @property({
     type: 'number',

@@ -1,6 +1,25 @@
 import {Entity, model, property} from '@loopback/repository';
 
-@model()
+@model({
+  settings: {
+    foreignKeys:
+    {
+      fkPlanServicioPlanPlanID: {
+        name: 'fkPlanServicioPlanPlanID',
+        entity: 'Plan',
+        entityKey: 'id',
+        foreignKey: 'planId'
+      },
+      fkPlanServicioPlanServicioPlanID: {
+        name: 'fkPlanServicioPlanServicioPlanID',
+        entity: 'ServicioPlan',
+        entityKey: 'id',
+        foreignKey: 'servicioPlanId'
+      }
+    }
+  }
+})
+
 export class PlanServicioPlan extends Entity {
   @property({
     type: 'number',

@@ -3,7 +3,20 @@ import {Solicitudes} from './solicitudes.model';
 import {Ciudad} from './ciudad.model';
 import {SalaVelacion} from './sala-velacion.model';
 
-@model()
+@model({
+  settings: {
+    foreignKeys:
+    {
+      fkSedesFunerariaCiudadID: {
+        name: 'fkSedesFunerariaCiudadID',
+        entity: 'Ciudad',
+        entityKey: 'id',
+        foreignKey: 'ciudadId'
+      }
+    },
+  }
+})
+
 export class SedesFuneraria extends Entity {
   @property({
     type: 'number',
