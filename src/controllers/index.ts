@@ -23,3 +23,4 @@ export * from './factura-pago.controller';
 export * from './pago-factura.controller';
 export * from './plan-servicio-plan.controller';
 export * from './servicio-plan-plan.controller';
+export * from './administrador-de-archivos.controller';
