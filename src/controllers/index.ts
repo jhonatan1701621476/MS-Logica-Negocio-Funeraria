@@ -37,3 +37,6 @@ export * from './sala-velacion.controller';
 export * from './sede-funeraria.controller';
 export * from './servicio-plan.controller';
 export * from './solicitudes.controller';
+export * from './cliente-resenas.controller';
+export * from './resenas-cliente.controller';
+export * from './resenas.controller';
