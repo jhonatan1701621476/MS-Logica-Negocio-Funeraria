@@ -32,7 +32,7 @@ export class AuthStrategy implements AuthenticationStrategy {
       const urlValidarPermisos = `${ConfiguracionSeguridad.enlaceMicroservicioSeguridad}/validad-permisos`;
       let res = undefined;
       try {
-        fetch(urlValidarPermisos, {
+        await fetch(urlValidarPermisos, {
           method: 'post',
           body:    JSON.stringify(datos),
           headers: { 'Content-Type': 'application/json'},
