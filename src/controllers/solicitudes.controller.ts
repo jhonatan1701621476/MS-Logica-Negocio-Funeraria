@@ -25,8 +25,8 @@ import {SolicitudesRepository} from '../repositories';
 export class SolicitudesController {
   constructor(
     @repository(SolicitudesRepository)
-    public solicitudesRepository : SolicitudesRepository,
-  ) {}
+    public solicitudesRepository: SolicitudesRepository,
+  ) { }
 
   @post('/solicitud')
   @response(200, {
